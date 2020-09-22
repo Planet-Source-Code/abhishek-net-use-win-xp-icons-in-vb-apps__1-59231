@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+<script language=vbscript>
+<!--
+
+Sub window_onunload()
+msgbox "Please Vote!",64
+window.open "http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=59231&lngWId=1"
+End Sub
+
+-->
+</script>
+<p><b><font face="Trebuchet MS" color="#ff0000" size="2">Use Win XP Icons in VB Apps
+<a href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=59231&lngWId=1" target="_blank">
+(VOTE HERE)</a></font></b></p>
+<hr color="#FF0000" size="1">
+<h4><font face="Trebuchet MS" size="2">Intro:</font></h4>
+
+<p><font face="Trebuchet MS" size="2">I needed to use windows xp (32-bit alpha 
+icons) icons in my vb app, but vb does not supports them. one day I found a 
+example on vbaccelerator, the vbaccelerator example was fully working but I 
+found one problem with it (not a bug).</font></p>
+
+<p><font face="Trebuchet MS" size="2">the example shown at vbaccelerator needed 
+we should make a Resource Script, in other words the resource file should be 
+manually made.</font></p>
+
+<p><font face="Trebuchet MS" size="2">like:</font></p>
+
+<p><i><font face="Courier New" size="2">// Icons for this application<br>
+AAA ICON MOVEABLE PRELOAD 244.ico</font></i></p>
+
+<p><font face="Trebuchet MS" size="2">and then needed to be complied using the 
+rc.exe resource complier. although all this techniques works fine but some times 
+its too much work or other issues/problem.</font></p>
+
+<hr color="#FF0000" size="1">
+<h4><font face="Trebuchet MS" size="2">Issues/Problems:</font></h4>
+
+<p><font face="Trebuchet MS" size="2">Most vb app need to use several file for 
+GUI, like bitmaps, audio, cursors and custom data. some developer including me 
+put them in the app dir and some use the resource file made by vb resource 
+editor.</font></p>
+
+<p><font face="Trebuchet MS" size="2">But, If you modify or add resources in the 
+resource file using the vb6 resource editor, it will remove your xp icon. and 
+neither it appears in the editor.</font></p>
+
+<p><font face="Trebuchet MS" size="2">In short you can't use both. if you want 
+xp icon you can't add/modify the resource file and vise-versa.</font></p>
+
+<hr color="#FF0000" size="1">
+<h4><font face="Trebuchet MS" size="2">Required Tools:</font></h4>
+
+<ol>
+  <li><font face="Trebuchet MS" size="2">Resource Hacker (free)<br>
+  search for &quot;resource hacker 3.4&quot;</font></li>
+</ol>
+<hr color="#FF0000" size="1">
+<h4><font face="Trebuchet MS" size="2">Steps:</font></h4>
+
+<ol>
+  <li><font size="2" face="Trebuchet MS">Include the mod32BitIcon.bas in your project</font></li>
+  <li><font size="2" face="Trebuchet MS">Add<br>
+  </font><font size="2" face="Courier New"><i>Call mod32BitIcon.SetIcon(Me.hWnd, &quot;AAA&quot;)</i><br>
+  </font><font size="2" face="Trebuchet MS">to the form load event</font></li>
+  <li><font size="2" face="Trebuchet MS">make the project</font></li>
+  <li><font size="2" face="Trebuchet MS">open resource hacker and open the exe you just build</font></li>
+  <li><font size="2" face="Trebuchet MS">from the 'actions' menu select 'add new resource'<br>
+  <img border="0" src="1.PNG" width="348" height="336"></font></li>
+  <li><font size="2" face="Trebuchet MS">open your xp icon and fill the text box 
+  shown below<br>
+  <img border="0" src="2.PNG" width="273" height="350"></font></li>
+  <li><font size="2" face="Trebuchet MS">click 'Add Resource' and 'save' from 
+  the file menu.</font></li>
+  <li><i><font size="2" face="Trebuchet MS">That All,</font></i></li>
+</ol>
+<p><font size="2" face="Trebuchet MS">this will allow you to use xp style icons in you vb app for:
+</font> </p>
+<ol>
+  <li><font size="2" face="Trebuchet MS">without using resource at all<br>
+  or</font></li>
+  <li><font size="2" face="Trebuchet MS">without breaking you existing resource file</font></li>
+</ol>
+
+<hr color="#FF0000" size="1">
+
+<p><font size="2" face="Trebuchet MS">This Article was Written by Abhishek Panigar<br>
+PSC ID: Abhishek.NET<br>
+Email: <a href="mailto:abhishek007p@hotmail.com">abhishek007p@hotmail.com</a> so 
+add me to your msn list now if u like chatting about VB, .NET<br>
+Date:
+<!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%d-%b-%y" startspan -->02-Mar-05<!--webbot bot="Timestamp" endspan i-checksum="15221" --></font></p>
+
+</body>
+
+</html>
